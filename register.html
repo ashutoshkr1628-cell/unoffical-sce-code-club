@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for Code Club membership at Saharsa College of Engineering (SCE Saharsa). Get free access to hackathons, workshops, and generate your digital membership card.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Membership Registration | Code Club - Saharsa College of Engineering</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">Live Update</span>
+      <span>ByteQuest 2026: Intra-College 36-Hr Hackathon registrations are now open!</span>
+      <a href="events.html" class="announcement-link">Explore Events &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Code Club SCE Saharsa Home">
+        <div class="brand-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CODE CLUB <span class="brand-tag-unofficial">UNOFFICIAL</span></span>
+          <span class="brand-sub">Saharsa College of Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="events.html" class="nav-link">Events & Contests</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="register.html" class="btn btn-primary btn-sm">Join Club</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon-box" style="width: 32px; height: 32px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span style="font-weight: 800; font-size: 1.05rem;">CODE CLUB</span>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <nav class="drawer-nav-list">
+      <a href="index.html" class="drawer-link">Home <span>&rsaquo;</span></a>
+      <a href="about.html" class="drawer-link">About Us <span>&rsaquo;</span></a>
+      <a href="events.html" class="drawer-link">Events & Contests <span>&rsaquo;</span></a>
+      <a href="resources.html" class="drawer-link">Student Resources <span>&rsaquo;</span></a>
+      <a href="gallery.html" class="drawer-link">Gallery & Campus <span>&rsaquo;</span></a>
+      <a href="contact.html" class="drawer-link">Contact & FAQs <span>&rsaquo;</span></a>
+    </nav>
+    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Register Now</a>
+  </aside>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <!-- Optional Event Registration Redirect Banner -->
+        <div id="event-register-banner" class="announcement-bar" style="display: none; border-radius: var(--radius-md); margin-bottom: var(--space-xl);">
+          <div class="announcement-inner">
+            <span class="announcement-badge">Event Entry</span>
+            <span id="event-register-name">Priority event registration enabled.</span>
+          </div>
+        </div>
+
+        <div class="section-title-wrap">
+          <span class="section-tag">Student Enrollment</span>
+          <h1 class="section-title">Join Code Club <span class="text-gradient">SCE Saharsa</span></h1>
+          <p class="section-subtitle">
+            Open to all enrolled B.Tech students of Saharsa College of Engineering. Fill out the membership form to claim your digital member ID card and access hackathons, contests, and bootcamps.
+          </p>
+        </div>
+
+        <!-- Saved Member Notice -->
+        <div id="registered-notice" style="display: none; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 2rem; color: #a7f3d0; text-align: center;"></div>
+
+        <div class="register-layout">
+          <!-- REGISTRATION FORM -->
+          <div class="register-form-card">
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Student Membership Application</h2>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 2rem;">
+              Fill in your academic and contact details. All fields marked with <span style="color: var(--accent-rose);">*</span> are required.
+            </p>
+
+            <form id="membership-form" novalidate>
+              <!-- Row 1: Name & Roll -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName" class="form-label">
+                    Full Name <span class="required">*</span>
+                  </label>
+                  <input type="text" id="fullName" class="form-control" placeholder="e.g. Aman Kumar" required>
+                  <div id="err-fullName" class="form-error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="rollNo" class="form-label">
+                    College Roll / Reg No <span class="required">*</span>
+                  </label>
+                  <input type="text" id="rollNo" class="form-control" placeholder="e.g. 21105123012" required>
+                  <div id="err-rollNo" class="form-error-msg"></div>
+                </div>
+              </div>
+
+              <!-- Row 2: Department & Academic Year -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="branch" class="form-label">
+                    Branch / Department <span class="required">*</span>
+                  </label>
+                  <select id="branch" class="form-control" required>
+                    <option value="">Select your engineering branch</option>
+                    <option value="Computer Science & Engineering">Computer Science &amp; Engineering (CSE)</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering (ME)</option>
+                    <option value="Civil Engineering">Civil Engineering (CE)</option>
+                    <option value="Electrical Engineering">Electrical Engineering (EE)</option>
+                    <option value="Electronics & Communication">Electronics &amp; Communication (ECE)</option>
+                  </select>
+                  <div id="err-branch" class="form-error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="academicYear" class="form-label">
+                    Academic Year <span class="required">*</span>
+                  </label>
+                  <select id="academicYear" class="form-control" required>
+                    <option value="">Select your current year</option>
+                    <option value="1st Year (Fresher)">1st Year (Batch 2025-29)</option>
+                    <option value="2nd Year (Sophomore)">2nd Year (Batch 2024-28)</option>
+                    <option value="3rd Year (Junior)">3rd Year (Batch 2023-27)</option>
+                    <option value="4th Year (Senior)">4th Year (Batch 2022-26)</option>
+                  </select>
+                  <div id="err-academicYear" class="form-error-msg"></div>
+                </div>
+              </div>
+
+              <!-- Row 3: Email & WhatsApp -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input type="email" id="email" class="form-control" placeholder="student@example.com" required>
+                  <div id="err-email" class="form-error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">
+                    Phone / WhatsApp No <span class="required">*</span>
+                  </label>
+                  <input type="tel" id="phone" class="form-control" placeholder="10-digit mobile number" required>
+                  <div id="err-phone" class="form-error-msg"></div>
+                </div>
+              </div>
+
+              <!-- Row 4: Technical Interests -->
+              <div class="form-group">
+                <label class="form-label">
+                  Primary Areas of Interest <span class="required">*</span>
+                </label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Competitive Programming">
+                    <span>Competitive Coding / DSA</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Web Development">
+                    <span>Web Development (Frontend/Backend)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Machine Learning">
+                    <span>AI &amp; Machine Learning</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Open Source & DevOps">
+                    <span>Open Source &amp; DevOps</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Mobile Apps">
+                    <span>Mobile App Development</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Cyber Security">
+                    <span>Cyber Security / Ethical Hacking</span>
+                  </label>
+                </div>
+                <div id="err-interests" class="form-error-msg"></div>
+              </div>
+
+              <!-- Row 5: GitHub & LinkedIn (Optional) -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="github" class="form-label">GitHub Profile URL (Optional)</label>
+                  <input type="url" id="github" class="form-control" placeholder="https://github.com/your-username">
+                </div>
+
+                <div class="form-group">
+                  <label for="linkedin" class="form-label">LinkedIn Profile URL (Optional)</label>
+                  <input type="url" id="linkedin" class="form-control" placeholder="https://linkedin.com/in/your-username">
+                </div>
+              </div>
+
+              <!-- Row 6: Motivation -->
+              <div class="form-group">
+                <label for="motivation" class="form-label">
+                  Why do you want to join Code Club? <span class="required">*</span>
+                </label>
+                <textarea id="motivation" rows="3" class="form-control" placeholder="Briefly share what you hope to learn or build, or how you wish to collaborate with peers..."></textarea>
+                <div id="err-motivation" class="form-error-msg"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+                <span>Submit Application &amp; Generate ID Card</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- SIDEBAR: LIVE MEMBERSHIP CARD PREVIEW -->
+          <div class="register-sidebar">
+            <div class="membership-card-preview">
+              <div class="card-top-bar">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="brand-icon-box" style="width: 28px; height: 28px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="16 18 22 12 16 6"/>
+                      <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                  </div>
+                  <span style="font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em;">SCE CODE CLUB</span>
+                </div>
+                <div class="card-chip"></div>
+              </div>
+
+              <div id="card-preview-name" class="member-card-name">STUDENT NAME</div>
+              <div id="card-preview-id" class="member-card-id">SCE-CC-2026-####</div>
+
+              <div class="member-card-details">
+                <div class="card-detail-item">
+                  <span class="card-detail-label">Department</span>
+                  <span id="card-preview-branch" class="card-detail-val">Branch</span>
+                </div>
+                <div class="card-detail-item">
+                  <span class="card-detail-label">Year</span>
+                  <span id="card-preview-year" class="card-detail-val">Academic Year</span>
+                </div>
+                <div class="card-detail-item">
+                  <span class="card-detail-label">Roll Number</span>
+                  <span id="card-preview-roll" class="card-detail-val">Roll No</span>
+                </div>
+                <div class="card-detail-item">
+                  <span class="card-detail-label">Issue Date</span>
+                  <span id="card-preview-date" class="card-detail-val">2026</span>
+                </div>
+              </div>
+
+              <div class="member-card-footer">
+                <div>
+                  <span id="membership-status-badge" class="badge badge-amber">Preview Card</span>
+                </div>
+                <div class="barcode-mock">
+                  <span class="barcode-bar w-2"></span>
+                  <span class="barcode-bar"></span>
+                  <span class="barcode-bar w-3"></span>
+                  <span class="barcode-bar"></span>
+                  <span class="barcode-bar w-2"></span>
+                  <span class="barcode-bar"></span>
+                  <span class="barcode-bar w-3"></span>
+                  <span class="barcode-bar"></span>
+                  <span class="barcode-bar w-2"></span>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; gap: 0.5rem;">
+              <button id="btn-print-card" class="btn btn-secondary btn-sm" style="width: 100%;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 6 2 18 2 18 9"/>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                  <rect x="6" y="14" width="12" height="8"/>
+                </svg>
+                <span>Print / Save Membership Card</span>
+              </button>
+              <button id="btn-export-csv" class="btn btn-outline btn-sm" style="width: 100%;" onclick="exportSubmissionsToCSV()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Export Submissions Roster (CSV)</span>
+              </button>
+            </div>
+
+            <!-- BENEFITS CARD -->
+            <div class="benefits-card">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Membership Privileges</h3>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Priority access to 36-Hr Hackathons &amp; coding contests.</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Lab workstation reservation during weekend code sprints.</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>1-on-1 resume reviews and mock technical interview drills.</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Verified digital credentials for club workshop participation.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SUCCESS CONFIRMATION MODAL -->
+  <div id="success-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-success-title">
+    <div class="modal-box" style="text-align: center;">
+      <div class="modal-body" style="padding: 2.5rem 1.5rem;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h3 id="modal-success-title" style="font-size: 1.6rem; margin-bottom: 0.5rem; color: #ffffff;">Registration Successful!</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem;">
+          Welcome to the family, <strong id="success-member-name" style="color: #fff;">Student</strong>! Your membership has been officially registered with ID:
+        </p>
+
+        <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 800; color: var(--accent-emerald-light); background: var(--bg-secondary); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px dashed var(--accent-emerald); display: inline-block; margin-bottom: 1.5rem;">
+          <span id="success-member-id">SCE-CC-2026-0000</span>
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 2rem;">
+          Your digital card preview is now active. Check the Events tab to register for ByteQuest 2026 or explore our 20+ student learning resources.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary" onclick="closeSuccessModal()">Close</button>
+          <a href="events.html" class="btn btn-primary">Browse Events</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="disclaimer-banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>
+          <strong>Disclaimer:</strong> This is an unofficial student-operated website created by student developers for Code Club, Saharsa College of Engineering, Saharsa. Not an official publication of the Department of Science &amp; Technology, Govt. of Bihar.
+        </span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-icon-box" style="width: 32px; height: 32px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="brand-name">CODE CLUB <span class="brand-tag-unofficial">SCE</span></span>
+          </div>
+          <p class="footer-desc">
+            Empowering students of Saharsa College of Engineering with practical coding skills, collaborative hackathons, algorithmic excellence, and career guidance.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">GH</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">LI</a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord">DC</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Structured Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Club &amp; Team</a></li>
+            <li><a href="events.html">Events &amp; Contests (12+)</a></li>
+            <li><a href="resources.html">Learning Resources (22+)</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="register.html">Membership Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Domains</h4>
+          <ul class="footer-links">
+            <li><a href="resources.html">DSA &amp; Competitive Prog</a></li>
+            <li><a href="resources.html">Full-Stack Web Dev</a></li>
+            <li><a href="resources.html">AI &amp; Machine Learning</a></li>
+            <li><a href="resources.html">Git &amp; Open Source</a></li>
+            <li><a href="resources.html">Placement &amp; Core CS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>College Campus</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Saharsa College of Engineering, Saharsa, Bihar - 852201</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>codeclub.scesaharsa@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Code Club, Saharsa College of Engineering. Built for students with &hearts;.
+        </div>
+        <div>
+          Designed for 90+ Lighthouse Performance &bull; HTML5 &bull; CSS3 &bull; Vanilla JS
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/register.js" defer></script>
+</body>
+</html>
