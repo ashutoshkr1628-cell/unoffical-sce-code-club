@@ -1,5 +1,7 @@
 # 💻 Code Club SCE Saharsa
+
 live link : file:///D:/code%20club%20website/about.html
+
 A modern, responsive web platform for **Code Club – Saharsa College of Engineering (SCE)**, designed to provide students with a central place to explore coding activities, events, resources, membership, and club information.
 
 > **Note:** This is an unofficial, student-operated project and is not an official publication of the Bihar Department of Science & Technology.
